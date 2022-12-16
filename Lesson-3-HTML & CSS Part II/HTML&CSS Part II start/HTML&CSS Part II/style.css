@@ -1,0 +1,118 @@
+:root {
+  --block-color-A: #ebc194;
+  --block-color-B: #c2d08b;
+  --block-color-C: #c2d08b;
+  --block-color-D: #fddd9b;
+  --block-color-D-1: #c3ffdb;
+  --block-color-D-2: #ffd2f0;
+  --block-color-E: #8bb6c0;
+  --border-color: #8080ff;
+  --border-radius: 10px;
+}
+
+* {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+html {
+  padding: 10px;
+  background-color: #aaa;
+}
+
+body {
+  padding: 30px;
+  background-color: #eee;
+}
+
+.A {
+  width: 300px;
+  height: 200px;
+  background-color: var(--block-color-A);
+}
+
+.B {
+  width: 500px;
+  height: 200px;
+  background-color: var(--block-color-B);
+}
+
+.C {
+  width: 200px;
+  height: 200px;
+  background-color: var(--block-color-C);
+}
+
+.D {
+  display: block;
+  width: 600px;
+  height: 200px;
+  background-color: var(--block-color-D);
+}
+
+.E {
+  width: 810px;
+  height: 200px;
+  background-color: var(--block-color-E);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.D-1,
+.D-2 {
+  display: none;
+}
+
+#innerBox {
+  /* 位置 */
+  /* 默认为文档流 */
+  position: static;
+  /* 相对位置布局 */
+  position: relative;
+  /* 绝对位置布局 */
+  position: absolute;
+  /* 固定视口（viewport）布局 */
+  position: fixed;
+  /* 条件视口（viewport）布局 */
+  position: sticky;
+  /* 布局 */
+  /* div的布局默认为 block */
+  display: block;
+  /* width: 300px; */
+  height: 180px;
+  /* 特性 */
+  background-color: #13c2c2;
+
+}
+
+#outsideBox {
+  /* 位置 */
+  position: static;
+  /* 布局 */
+  /* 盒子布局 - 刚体 - 完全自我支撑 */
+  display: block;
+  /* 文字布局 - 流体 - 无法自我支撑 - 文字支撑 */
+  /* display: inline; */
+  /* 贴合内层 - 对外流体 对内刚体 - 依靠内层的基础上进行支撑 */
+  /* display: inline-block; */
+
+  /* 实质内容到边框距离 */
+  padding: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* 上下 左右 */
+  padding: 100px 0;
+  /* 上 左右 下 */
+  padding: 50px 30px 100px;
+  /* 上 右 下 左 */
+  padding: 0 100px 50px 10px;
+
+
+  /* 特性 */
+  color: #fff;
+  background-color: #1890ff;
+}

@@ -1,0 +1,95 @@
+:root {
+  --block-color-A: #ebc194;
+  --block-color-B: #c2d08b;
+  --block-color-C: #c2d08b;
+  --block-color-D: #fddd9b;
+  --block-color-D-1: #c3ffdb;
+  --block-color-D-2: #ffd2f0;
+  --block-color-E: #8bb6c0;
+  --border-color: #8080ff;
+  --border-radius: 1rem;
+  font-size: 20px;
+}
+
+* {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+html {
+  padding: 1rem;
+  background-color: #aaa;
+}
+
+body {
+  padding: 3rem;
+  background-color: #eee;
+}
+
+.A {
+  width: 30rem;
+  height: 20rem;
+  background-color: var(--block-color-A);
+}
+
+.B {
+  position: absolute;
+  width: 50rem;
+  height: 20rem;
+  background-color: var(--block-color-B);
+  left: 30rem;
+  top: 4rem;
+}
+
+
+.C {
+  position: sticky;
+  top: 10rem;
+  bottom: 8rem;
+  width: 20rem;
+  height: 20rem;
+  background-color: var(--block-color-C);
+}
+
+.D {
+  position: absolute;
+  /* position: static; */
+  width: 60rem;
+  height: 20rem;
+  background-color: var(--block-color-D);
+  left: 20rem;
+  top: 30rem;
+}
+
+.E {
+  width: 81rem;
+  height: 20rem;
+  background-color: var(--block-color-E);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.D-1,
+.D-2 {
+  display: none;
+}
+
+.D-1 {
+  display: inline-block;
+  margin: 0.5rem;
+  width: 50%;
+  height: 90%;
+  background-color: var(--block-color-D-1);
+}
+
+.D-2 {
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  height: 50%;
+  top: 10%;
+  right: -1rem;
+  background-color: var(--block-color-D-2);
+}
