@@ -1,0 +1,130 @@
+:root {
+  --block-color-A: #ebc194;
+  --block-color-B: #c2d08b;
+  --block-color-C: #5ec7cd;
+  --block-color-D: #fddd9b;
+  --block-color-D-1: #c3ffdb;
+  --block-color-D-2: #ffd2f0;
+  --block-color-E: #8bb6c0;
+  --block-color-F: #3fdc8d;
+  --border-color: #8080ff;
+  --border-radius: 1rem;
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 90%;
+  margin: 1vmin auto;
+}
+
+/* px */
+/* em,rem */
+/* % calc(rem % vw) */
+/* vmin vmax */
+/* minmax(10rem 15rem) */
+
+main > div {
+  border: 0.2rem solid var(--border-color);
+  padding: 0.5rem;
+  background-color: var(--block-color-B);
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 3rem;
+  display: flex;
+  justify-content: center;
+
+  display: grid;
+  place-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 10rem 10rem;
+  grid-template-columns: 20rem 1fr 25rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 5rem 1fr;
+  grid-template-columns: repeat(auto-fill, 20rem);
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-auto-rows: 10rem;
+
+  /* grid-row-gap: 1rem;
+  grid-column-gap: 1rem; */
+
+  gap: 1rem 2rem;
+}
+
+main {
+  gap: 1rem;
+  grid-template-columns: repeat(3, 32vmin);
+  grid-template-rows: repeat(3, 32vmin);
+  place-items: center normal;
+  place-items: center stretch;
+
+  place-items: normal center;
+  place-items: stretch center;
+  place-items: normal;
+}
+
+/* main div:nth-child(2) {
+  background-color: var(--block-color-D-1);
+  grid-column: 2/4;
+  grid-row: 1;
+}
+main div:nth-child(5) {
+  background-color: var(--block-color-D-2);
+  grid-column: 3;
+  grid-row: 2/4;
+} */
+
+/* main div:nth-child(1){
+  grid-area: header;
+}
+main div:nth-child(2){
+  grid-area: nav;
+}
+main div:nth-child(5){
+  grid-area: aside;
+}
+
+main {
+  grid-template-areas: 
+  "header nav nav"
+  "part part aside"
+  "part part aside";
+} */
+
+main div:nth-child(1){
+  grid-area: header;
+}
+main div:nth-child(2){
+  grid-area: nav;
+}
+
+main div:nth-child(5){
+  grid-area: aside;
+}
+
+main {
+  grid-template-areas: 
+  "header nav nav"
+  "part part aside"
+  "part part aside";
+}
+
